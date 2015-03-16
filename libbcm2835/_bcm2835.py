@@ -342,6 +342,9 @@ bcm2835_i2c_read.argtypes = [STRING, uint32_t]
 bcm2835_i2c_read_register_rs = _libraries['/usr/local/lib/libbcm2835.so'].bcm2835_i2c_read_register_rs
 bcm2835_i2c_read_register_rs.restype = uint8_t
 bcm2835_i2c_read_register_rs.argtypes = [STRING, STRING, uint32_t]
+bcm2835_i2c_write_read_rs = _libraries['/usr/local/lib/libbcm2835.so'].bcm2835_i2c_write_read_rs
+bcm2835_i2c_write_read_rs.restype = uint8_t
+bcm2835_i2c_write_read_rs.argtypes = [STRING, uint32_t, STRING, uint32_t]
 bcm2835_st_read = _libraries['/usr/local/lib/libbcm2835.so'].bcm2835_st_read
 bcm2835_st_read.restype = uint64_t
 bcm2835_st_read.argtypes = []
@@ -653,8 +656,8 @@ __all__ = ['BCM2835_SPI0_CS_ADCS', '_ATFILE_SOURCE',
            'BCM2835_SPI0_CS_INTR', 'BCM2835_SPI_CLOCK_DIVIDER_256',
            '__USE_SVID', 'bcm2835_delay', '__USE_ANSI',
            'BCM2835_GPLEV1', 'BCM2835_GPLEV0',
-           'bcm2835_i2c_read_register_rs', 'BCM2835_PWM_CONTROL',
-           'bcm2835_spi_transfern', 'bcm2835_gpio_ren',
+           'bcm2835_i2c_read_register_rs', 'bcm2835_i2c_write_read_rs'
+           'BCM2835_PWM_CONTROL', 'bcm2835_spi_transfern', 'bcm2835_gpio_ren',
            'BCM2835_BSC_S_TA', 'BCM2835_PWM1_USEFIFO',
            'BCM2835_PWM_CLOCK_DIVIDER_8192', 'BCM2835_PWM1_REVPOLAR',
            'BCM2835_BSC1_BASE', '__STDC_ISO_10646__',
